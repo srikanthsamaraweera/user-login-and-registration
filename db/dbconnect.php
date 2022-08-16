@@ -1,3 +1,7 @@
+/*bellow class is for the database operations.
+Seperate functions are created to each operation that interracts with the database.
+*/
+
 <?php
 class Dbconnect
 {

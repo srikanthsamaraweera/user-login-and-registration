@@ -41,7 +41,8 @@ class Dbconnect
         }
     }
 
-    public function user_login($username, $password)
+    public function user_login($username, $password)/*checks if the username and password matches a record in the database. 
+    then returns the number of records. Only if the count is 1, the username and password is correct.*/
     {
         $sql = "select * from users where username='$username'&&password='$password'";
         $conn = $this->connect();
@@ -50,13 +51,13 @@ class Dbconnect
         $conn->close();
         return $num_rows;
     }
-    public function select($sql)
+    public function select($sql) // selects data from database according to any sql query and returns the resultset
     {
         $conn = $this->connect();
         $resultset = $conn->query($sql);
         return $resultset;
     }
-    public function edituser_username($username)
+    public function edituser_username($id)
     {
     }
 }

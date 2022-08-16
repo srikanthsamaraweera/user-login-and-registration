@@ -5,7 +5,7 @@ Seperate functions are created to each operation that interracts with the databa
 <?php
 class Dbconnect
 {
-    private function connect()
+    private function connect() //connects the database
     {
         // Create connection
         $server = "localhost:3306";
@@ -19,7 +19,7 @@ class Dbconnect
         return $conn;
     }
 
-    public function num_rows($sql)
+    public function num_rows($sql) //fetch resultset according to sql query and returns the row count
     {
 
         $conn = $this->connect();
@@ -29,7 +29,7 @@ class Dbconnect
         return $num_rows;
     }
 
-    public function register_user($firstname, $lastname, $username, $password, $level)
+    public function register_user($firstname, $lastname, $username, $password, $level) //inserts user data to users table
     {
         $conn = $this->connect();
 

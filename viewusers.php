@@ -1,5 +1,5 @@
 <?php
-/*This file returns the records in the user table in a table*/
+
 include 'db/dbconnect.php';
 $conn = new Dbconnect();
 $sql = "select * from users";
